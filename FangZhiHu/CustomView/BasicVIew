@@ -1,0 +1,62 @@
+
+    1:基础控件：
+        1.1:TextView:
+            textSize,textColor,lines:允许占几行,
+            textAllCaps:大小写转换,
+            textStyle:字体样式bold加粗,
+            ellipsize:文字过长end在最后用省略号代替,
+            lineSpacingExtra:行间距,
+            lineSpacingMultiplier:行间距是默认间距的多少倍数
+            跑马灯效果:ellipsize="marquee",singleLine="true"单行，focusable="true"获取到焦点
+            focusableInTouchMode="true"在触摸模式下获取到焦点；
+            drawable...往文字四周画图 drawablePadding 设置间距;
+            动态设置setCompoundDrawables(drawable)参数是drawabel
+            setCompoundDrawablesWithIntrinsicBounds(resID) 参数是resId;
+
+        1.2:EditView
+            是TextView子类，TextView的属性他基本都有，
+            都有特性:焦点与输入文字的改变textChange
+            默认获取到焦点，去除EditText焦点Text.setFocusable(true);
+            Text.setFocusableInTouchMode(true);
+            Text.requestFocus();  // 初始不让EditText得焦点
+            Text.requestFocusFromTouch();
+            在activity注册中配置windowSoftInputMode="stateAlwaysHidden|adjustResize"
+
+        1.3:ProgressBar
+            ProgressBar,进度条，通过设置style定义进度条的形状，如水平进度条
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            progressDrawable="@drawable/progressShape" 在progressShape中需要对
+            id="@android:id/background"背景，
+            id="@android:id/secondaryProgress"预加载进度
+            id="@android:id/progress"当前进度样式进行设置
+            在ProgressBar内部实行了post(Runable)方法，用于ProgressBar在子线程中更新进度；
+
+        1.4:ImageView
+            特性scaleType用于图片的缩放,centerCrop按比例缩放充填这个控件，超过部分将截取
+            fitXY不按比例缩放充填整个控件，不截取图片，center不缩放居中显示
+
+        1.5:ScrollView
+
+        1.6:RadioGroup单选框，check(id)选中某一项，clearCheck()清除选项，
+            在单选项中，点击同一项，checkListener监听不会重复调用；
+
+
+        1.7:CheckBox多选框，setcheck()用于选中，会调用checkListener监听，所以在列表中设置check时，先设置checkListener监听为null
+            ,setSelected()用于样式的改变
+
+
+    2.常用五大布局
+        2.1:ConstraintLayout,现在Android的默认布局，他集合了线性布局、相对布局与百分比布局的优点
+
+        2.2:LinearLayout线性布局 特点方向为horizontal是layout_gravity在水平方向上失效，垂直方向
+            在水平方向上失效，layout_gravity是子控件相对于父控件位置摆放，
+        2.3:RelativeLayout相对布局 分为两点，相对于父控件alignParent... 与相对于邻居align...
+        2.4:FrameLayout 帧布局,通过layout_gravity 进行子布局位置摆放
+        2.5:PercentLayout百分布局 占据屏幕height与width的百分比
+
+
+    3.高级控件使用
+        3.1:ViewPager
+        3.2:RecyclerView
+        3.3:ListView
+        3.4:GridView

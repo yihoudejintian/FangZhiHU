@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt' // kapt 插件
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "27.0.2"
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    kapt {
+        generateStubs = true
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    kapt deps.dagger.compiler
+    kapt deps.dagger.android_support_compiler
+    api deps.dagger.android_support
+    api deps.dagger.runtime
+    api deps.dagger.android
+    api deps.retrofit.runtime
+    api deps.retrofit.adapter_rxjava
+    api deps.retrofit.adapter_scalars
+    api deps.rxjava2
+    api deps.rx_android
+    api deps.logging
+    api deps.gson
+}

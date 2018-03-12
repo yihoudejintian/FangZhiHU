@@ -6,13 +6,87 @@
     android:layout_height="match_parent"
     tools:context="com.tongqinyuan.customview.MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="中国是个好地方"
+            android:onClick="btnClick"
+            />
+
+        <SeekBar
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:max="10"
+            android:progress="3" />
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="中国是个好地方哈哈哈哈或或或或哈哈哈哈或或或哈哈哈哈哈哈哈哈或哈哈哈哈或或"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:ellipsize="marquee"-->
+            <!--android:singleLine="true"-->
+            <!--android:focusable="true"-->
+            <!--android:focusableInTouchMode="true"-->
+            <!--/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/edit"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="请输入fdsafdsa"-->
+            <!--/>-->
+
+        <!--<com.tongqinyuan.customview.ClearEditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="请输入"-->
+            <!--/>-->
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            />
+
+<!--android:focusableInTouchMode="true"-->
+    </LinearLayout>
     <TextView
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:lines="2"
+        android:lineSpacingExtra="1dp"
+        android:lineSpacingMultiplier="2"
+        android:ellipsize="end"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckedTextView
+        android:id="@+id/checkedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CheckedTextView"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="155dp"
+        tools:ignore="MissingConstraints" />
+
+
+
 
 </android.support.constraint.ConstraintLayout>

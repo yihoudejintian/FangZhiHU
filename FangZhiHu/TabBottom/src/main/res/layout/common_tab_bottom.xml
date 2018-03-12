@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_1_2"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="中国是个好地方" />
+
+    <Button
+        android:id="@+id/btn_1_1"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:background="@drawable/custom_ripple"
+        android:gravity="center"
+        android:text="中国是个好地方"
+        app:layout_constraintLeft_toRightOf="@+id/btn_1_2" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tab_background"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.tabbottom.view.TabItem
+            android:id="@+id/tl_tab_1"
+            android:layout_width="0dp"
+            android:layout_height="68dp"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tl_tab_2" />
+
+        <com.tabbottom.view.TabItem
+            android:id="@+id/tl_tab_2"
+            android:layout_width="0dp"
+            android:layout_height="68dp"
+            app:layout_constraintLeft_toRightOf="@id/tl_tab_1"
+            app:layout_constraintRight_toLeftOf="@id/tl_tab_3" />
+
+
+        <com.tabbottom.view.TabItem
+            android:id="@+id/tl_tab_3"
+            android:layout_width="0dp"
+            android:layout_height="68dp"
+
+            app:layout_constraintLeft_toRightOf="@id/tl_tab_2"
+            app:layout_constraintRight_toLeftOf="@id/tl_tab_4" />
+
+        <com.tabbottom.view.TabItem
+            android:id="@+id/tl_tab_4"
+            android:layout_width="0dp"
+            android:layout_height="68dp"
+            app:layout_constraintLeft_toRightOf="@id/tl_tab_3"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

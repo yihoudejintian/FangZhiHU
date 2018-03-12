@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ig_tab_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_restore_gray_24dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_tab_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <TextView
+        android:id="@+id/tv_tab_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="首页"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ig_tab_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <!--消息数量-->
+    <TextView
+        android:id="@+id/tv_tab_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="99"
+        android:textSize="10sp"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:translationX="14dp"
+        android:background="@drawable/round"
+        android:visibility="invisible"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <!--消息点数-->
+    <View
+        android:id="@+id/v_tab_dot"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/round"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:translationX="14dp"
+        android:visibility="visible"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/ig_tab_icon"
+        />
+
+</merge>

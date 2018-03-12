@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/CommonLib/CommonLib.iml" filepath="$PROJECT_DIR$/CommonLib/CommonLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CommonLibKotlin/CommonLibKotlin.iml" filepath="$PROJECT_DIR$/CommonLibKotlin/CommonLibKotlin.iml" />
       <module fileurl="file://$PROJECT_DIR$/CustomView/CustomView.iml" filepath="$PROJECT_DIR$/CustomView/CustomView.iml" />
       <module fileurl="file://$PROJECT_DIR$/FangZhiHu.iml" filepath="$PROJECT_DIR$/FangZhiHu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/KotlinOKhttp/KotlinOKhttp.iml" filepath="$PROJECT_DIR$/KotlinOKhttp/KotlinOKhttp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TabBottom/TabBottom.iml" filepath="$PROJECT_DIR$/TabBottom/TabBottom.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
